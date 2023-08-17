@@ -1,4 +1,4 @@
-#WORK IN PROGRESS...........
+# WORK IN PROGRESS...........
 
 # Pulser - Social Network for Existential Ideas
 
@@ -45,7 +45,7 @@ Created by [HONTCHAROUK Alexandre](https://alexwebdevlyon.netlify.app).
 
 
 //----------------------------------------------------------------------------------------------------------------------------//
-#TRAVAIL EN COURS...........
+# TRAVAIL EN COURS...........
 
 # Pulser - Réseau Social d'Idées Existentielles
 
