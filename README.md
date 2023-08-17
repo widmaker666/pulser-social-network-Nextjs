@@ -1,35 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#WORK IN PROGRESS...........
 
-## Getting Started
+# Pulser - Social Network for Existential Ideas
 
-First, run the development server:
+Pulser is a social network dedicated to sharing existential, intellectual, and philosophical ideas. It's a space where curious minds can connect, discuss, and explore deep thoughts on a variety of topics.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Pulser provides a dynamic platform for sharing ideas, engaging in conversations, and inspiring critical thinking. Whether it's philosophical debates, existential questions, or intellectual discussions, Pulser is designed to encourage meaningful exchanges and stimulate thought.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Create a personal profile to share your interests and ideas.
+- Share posts about existential and intellectual subjects.
+- Engage in enriching conversations with other users.
+- Follow users whose ideas interest you.
+- Explore popular discussions and discover new perspectives.
 
-## Learn More
+## Screenshots
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Installation
 
-## Deploy on Vercel
+To test Pulser locally, follow these steps:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone this repository: `git clone https://github.com/your-username/pulser.git`
+2. Install dependencies: `npm install`
+3. Configure settings in the configuration file: `config.js`
+4. Launch the application: `npm start`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# pulser-social-network-Nextjs
+## Contributions
+
+We welcome contributions from the community! If you'd like to contribute to Pulser, please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for more information on how to submit pull requests and report issues.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Created by [HONTCHAROUK Alexandre](https://alexwebdevlyon.netlify.app).
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------//
+#TRAVAIL EN COURS...........
+
+# Pulser - Réseau Social d'Idées Existentielles
+
+Pulser est un réseau social dédié au partage d'idées existentielles, intellectuelles et philosophiques. C'est un espace où les esprits curieux peuvent se connecter, discuter et explorer des réflexions profondes sur une variété de sujets.
+
+## Aperçu
+
+Pulser offre une plateforme dynamique pour partager des idées, engager des conversations et stimuler la réflexion. Qu'il s'agisse de débats philosophiques, de questions existentielles ou de discussions intellectuelles, Pulser est conçu pour inspirer la pensée critique et favoriser des échanges significatifs.
+
+## Fonctionnalités
+
+- Créez un profil personnel pour partager vos intérêts et vos idées.
+- Partagez des publications sur des sujets existentiels et intellectuels.
+- Engagez-vous dans des conversations enrichissantes avec d'autres utilisateurs.
+- Suivez des utilisateurs dont les idées vous intéressent.
+- Explorez des discussions populaires et découvrez de nouvelles perspectives.
+
+## Captures d'écran
+
+
+## Installation
+
+Pour tester Pulser localement, suivez ces étapes :
+
+1. Clonez ce dépôt : `git clone https://github.com/votre-utilisateur/pulser.git`
+2. Installez les dépendances : `npm install`
+3. Configurez les paramètres dans le fichier de configuration : `config.js`
+4. Lancez l'application : `npm start`
+
+## Contributions
+
+Nous accueillons les contributions de la communauté ! Si vous souhaitez contribuer à Pulser, veuillez consulter [CONTRIBUTING.md](CONTRIBUTING.md) pour plus d'informations sur la manière de soumettre des pull requests et de signaler des problèmes.
+
+## Licence
+
+Ce projet est sous licence [Licence MIT](LICENSE).
+
+---
+
+Créé par [HONTCHAROUK Alexandre](https://alexwebdevlyon.netlify.app).
