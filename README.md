@@ -1,4 +1,5 @@
 # WORK IN PROGRESS...........
+![Lien vers l'image](https://zupimages.net/up/23/33/0pnb.png)
 
 # Pulser - Social Network for Existential Ideas
 
@@ -17,8 +18,6 @@ Pulser provides a dynamic platform for sharing ideas, engaging in conversations,
 - Explore popular discussions and discover new perspectives.
 
 ## Screenshots
-
-
 
 ## Installation
 
@@ -46,6 +45,7 @@ Created by [HONTCHAROUK Alexandre](https://alexwebdevlyon.netlify.app).
 
 //----------------------------------------------------------------------------------------------------------------------------//
 # TRAVAIL EN COURS...........
+![Lien vers l'image](https://zupimages.net/up/23/33/0pnb.png)
 
 # Pulser - Réseau Social d'Idées Existentielles
 
