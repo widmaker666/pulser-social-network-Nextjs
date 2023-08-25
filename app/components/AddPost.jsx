@@ -13,7 +13,7 @@ export default function AddPost() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:3000/api/posts", {
+      const res = await fetch("/api/posts", {
         method: "POST",
         headers: {
           "content-type": "application/json",

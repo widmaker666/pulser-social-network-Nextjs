@@ -5,8 +5,9 @@ import { IconEdit, IconTrash } from "@tabler/icons-react";
 import Link from "next/link";
 
 const getPosts = async () => {
+    const apiUrl = process.env.API_URL
   try {
-    const res = await fetch("http://localhost:3000/api/posts", {
+    const res = await fetch(`${apiUrl}/api/posts`, {
       cache: "no-store",
     });
 
@@ -28,13 +29,14 @@ const CardPosts = async () => {
         <h1 id="h1">Le mur des idées</h1>
         {/* Création d'un composant posts */}
         {posts.map((p) => (
-          <div className={styles.cardPosts}>
+          <div className={styles.cardPosts} key={p._id}>
             <div className={styles["infos-user"]}>
               <Image
                 src={avatar}
                 className={styles.imgCard}
                 width={50}
                 height={50}
+                alt="avatar"
               />
               <h4>Claudius</h4>
               <h4>Brasseur</h4>
