@@ -1,12 +1,13 @@
 import AddPost from "./components/AddPost";
-import Navbar from "./components/Navbar";
-
-
+import CardPosts from "./components/CardPosts";
 
 export default function Home() {
   return (
-    <>    
-     <AddPost/>
+    <>
+      <AddPost />
+      <section className="card-container">
+        <CardPosts />
+      </section>
     </>
   );
 }

@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
 
 // !Methode POST
 export async function POST(request) {
-  const { title, category, description } = await request.json();
+  const { title, description } = await request.json();
   await connectToMongoDB();
-  await Posts.create({ title, category, description });
+  await Posts.create({ title, description });
   return NextResponse.json(
     { message: "Post created successfully!" },
     { status: 201 }
@@ -17,7 +17,7 @@ export async function POST(request) {
 export async function GET() {
   await connectToMongoDB();
   const posts = await Posts.find();
-  return NextResponse.json({ message: "get information sucess" }, posts);
+  return NextResponse.json({posts});
 }
 
 // !Methode DELETE

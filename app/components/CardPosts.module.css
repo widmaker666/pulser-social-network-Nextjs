@@ -1,0 +1,54 @@
+.card-container {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;   
+    padding: 10px;   
+}
+.card-container h1 {
+    text-align: center;
+    padding-top: 8px;
+    text-transform: uppercase;
+}
+
+.cardPosts {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px;    
+}
+
+.infos-user {
+    display: flex;        
+}
+.imgCard {
+    border-radius: 50px;
+    border: 2px solid black;
+    
+}
+.infos-user h4 {
+    margin-left: 20px;
+    text-decoration: 1px underline black;
+    text-underline-offset: 5px;
+}
+
+.infos-card {
+    padding: 10px;
+}
+.infos-card h4 {
+    text-transform: capitalize;    
+}
+.infos-card p:last-child {
+    font-size: 0.5rem;
+    font-weight: 900;
+}
+
+.btnAll {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+
+
