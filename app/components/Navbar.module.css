@@ -3,9 +3,36 @@
   height: 70px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+  padding: 10px;
 }
+
+.connectionLinks {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #E4E2DD
+}
+
+.login{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #E4E2DD
+}
+
+.connectionLinks h3 {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 .imgLogo {
-  width: 50px;
+  width: 60px;
   height: auto;
 }
