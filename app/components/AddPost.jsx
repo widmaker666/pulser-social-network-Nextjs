@@ -1,5 +1,5 @@
 "use client";
-//oo
+
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import styles from "./AddPost.module.css";
