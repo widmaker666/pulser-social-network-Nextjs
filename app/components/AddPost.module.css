@@ -1,0 +1,43 @@
+.section-addPost {
+  width: 50%;
+}
+
+.add-post {
+  width: 40%;
+  height: auto;
+  margin: 10px auto;
+  border: 3px solid lightskyblue;
+  border-radius: 10px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 10px;
+}
+.form-container label {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.form-container input[type="text"] {
+  margin-bottom: 10px;
+  width: 20em;
+  height: 2em;
+  text-align: center;
+  border: 1px solid lightskyblue;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.form-container textarea {
+  margin-bottom: 10px;
+  resize: none;
+  border: 1px solid lightskyblue;
+  border-radius: 10px;
+  padding: 10px;
+  width: 20em;
+  height: 100px;
+}
