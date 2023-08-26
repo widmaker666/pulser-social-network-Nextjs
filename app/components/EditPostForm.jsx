@@ -10,13 +10,13 @@ export default function EditPostForm({ id, title, description }) {
   const router = useRouter();
 
   const handleSubmit = async (e) => {
-    const apiUrl = "http://localhost:3000";
+    
     const confirmed = confirm("tu es sur de modifier ce post ?");
     e.preventDefault();
 
     try {
       if (confirmed) {
-        const res = await fetch(`${apiUrl}/api/posts/${id}`, {
+        const res = await fetch(`/api/posts/${id}`, {
           method: "PUT",
           headers: {
             "Content-type": "application/json",

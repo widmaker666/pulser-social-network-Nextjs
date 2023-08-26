@@ -7,11 +7,11 @@ export default function RemoveBtn({ id }) {
   const router = useRouter();
 
   const removePosts = async () => {
-    const apiUrl = "http://localhost:3000"
+    
     const confirmed = confirm("Vous voulez supprimer le message ?");
 
     if (confirmed) {
-      const res = await fetch(`${apiUrl}/api/posts?id=${id}`, {
+      const res = await fetch(`/api/posts?id=${id}`, {
         method: "DELETE",
       });
       if (res.ok) { 
