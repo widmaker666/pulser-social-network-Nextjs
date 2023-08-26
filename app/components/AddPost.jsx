@@ -21,7 +21,7 @@ export default function AddPost() {
         body: JSON.stringify({ title, description }),
       });
       if (res.ok) {
-        console.log("ça marche c'est envoyé");
+        alert("Ton post est créé");
         setTitle("");
         setDescription("");
         router.refresh();

@@ -35,6 +35,7 @@
   font-size: 0.8rem;
   font-family: "Karla", sans-serif;
   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.24);
+  outline: none;
 }
 
 .form-container input[type="text"]:focus {
@@ -53,6 +54,7 @@
   font-family: "Karla";
   font-size: 0.8rem;
   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.24);
+  outline: none;
 }
 .form-container textarea:focus {
   background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);

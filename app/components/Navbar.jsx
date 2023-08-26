@@ -8,12 +8,12 @@ const Navbar = () => {
     <>
       <nav className={styles.navbar}>
         <div className={styles.logoDiv}>
-          <Image src={logoNav} alt="" className={styles.imgLogo} />
+          <Image src={logoNav} width={70} height={70} alt="" className={styles.imgLogo} />
         </div>
         <div className={styles.connectionLinks}>
-          <Link className={styles.register} href="/">register</Link>
+          <Link className={styles.register} href="/">Inscription</Link>
           <h3>/</h3>
-          <Link className={styles.login} href="/">login</Link>
+          <Link className={styles.login} href="/">Connexion</Link>
         </div>
       </nav>
     </>

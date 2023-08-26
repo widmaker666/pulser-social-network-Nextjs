@@ -11,7 +11,7 @@ export default function EditPostForm({ id, title, description }) {
 
   const handleSubmit = async (e) => {
     
-    const confirmed = confirm("tu es sur de modifier ce post ?");
+    const confirmed = confirm("Tu veux modifier ton post ?");
     e.preventDefault();
 
     try {
@@ -27,7 +27,7 @@ export default function EditPostForm({ id, title, description }) {
         if (!res.ok) {
           throw new Error("failed to fetch post");
         }
-        alert("Tu viens de modifier ton post");
+        alert("Tu viens de modifier ton post !");
         router.refresh();
         router.push("/");
       }
@@ -67,7 +67,7 @@ export default function EditPostForm({ id, title, description }) {
             required
             placeholder="Tell us about your story"
           ></textarea>
-          <button className={styles.btn} type="submit">Pulse it !</button>
+          <button className={styles.btn} type="submit">Pulse !</button>
         </form>
       </div>
     </>
