@@ -67,7 +67,7 @@ export default function EditPostForm({ id, title, description }) {
             required
             placeholder="Tell us about your story"
           ></textarea>
-          <button type="submit">Pulse it !</button>
+          <button className={styles.btn} type="submit">Pulse it !</button>
         </form>
       </div>
     </>

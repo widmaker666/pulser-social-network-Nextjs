@@ -21,7 +21,7 @@
   margin-bottom: 5px;
   text-transform: uppercase;
   letter-spacing: 3.8px;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .form-container input[type="text"] {
@@ -32,6 +32,7 @@
   border: 1px solid lightskyblue;
   border-radius: 10px;
   padding: 10px;
+  font-size: 0.68rem;
   font-family: "Karla", sans-serif;
 }
 
@@ -49,6 +50,7 @@
   width: 80%;
   height: 100px;
   font-family: "Karla";
+  font-size: 0.68rem;
 }
 .form-container textarea:focus {
   background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);

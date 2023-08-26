@@ -1,10 +1,7 @@
 import EditPostForm from "@/app/components/EditPostForm";
-import { IconHome } from "@tabler/icons-react";
-import Link from "next/link";
 
 const getPostById = async (id) => {
-
-  const apiUrl = process.env.API_URL
+  const apiUrl = process.env.API_URL;
 
   try {
     const res = await fetch(`${apiUrl}/api/posts/${id}`, {
@@ -21,7 +18,6 @@ const getPostById = async (id) => {
   }
 };
 
-
 export default async function EditPage({ params }) {
   const { id } = params;
   console.log(id);
@@ -32,10 +28,6 @@ export default async function EditPage({ params }) {
   return (
     <>
       <EditPostForm id={id} title={title} description={description} />
-      <Link href="/">
-        <IconHome size={50} color="blue" />
-      </Link>
     </>
   );
 }
-
