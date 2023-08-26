@@ -11,9 +11,9 @@ const Navbar = () => {
           <Image src={logoNav} alt="" className={styles.imgLogo} />
         </div>
         <div className={styles.connectionLinks}>
-          <Link className={styles.register} href="/register">register</Link>
+          <Link className={styles.register} href="/">register</Link>
           <h3>/</h3>
-          <Link className={styles.login} href="/login">login</Link>
+          <Link className={styles.login} href="/">login</Link>
         </div>
       </nav>
     </>

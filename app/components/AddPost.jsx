@@ -38,25 +38,25 @@ export default function AddPost() {
     <>
       <div className={styles["add-post"]}>
         <form onSubmit={handleSubmit} className={styles["form-container"]}>
-          <label htmlFor="title">Title</label>
+          <label htmlFor="title">Titre</label>
           <input
             value={title}
             required
             type="text"
             id="title"
-            placeholder="You wanna talk to ?"
+            placeholder="Un titre ...."
             onChange={(e) => setTitle(e.target.value)}
           />
           <label htmlFor="description">Description</label>
-          <textarea
+          <textarea          
             value={description}
             name="description"
             id="description"
             required
-            placeholder="Tell us about your story"
+            placeholder="La première phrase est souvent la plus dure à dire...."
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
-          <button type="submit">Pulse it !</button>
+          <button className={styles.btn} type="submit">Pulse !</button>
         </form>
       </div>
     </>
