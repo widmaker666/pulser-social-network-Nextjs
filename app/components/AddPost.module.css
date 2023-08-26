@@ -32,7 +32,7 @@
   border: 1px solid lightskyblue;
   border-radius: 10px;
   padding: 10px;
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   font-family: "Karla", sans-serif;
   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.24);
 }
@@ -51,7 +51,7 @@
   width: 80%;
   height: 100px;
   font-family: "Karla";
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.24);
 }
 .form-container textarea:focus {
