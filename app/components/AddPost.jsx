@@ -36,6 +36,7 @@ export default function AddPost() {
 
   return (
     <>
+    <section className={styles.backgroundFixed}>
       <div className={styles["add-post"]}>
         <form onSubmit={handleSubmit} className={styles["form-container"]}>
           <label htmlFor="title">Titre</label>
@@ -59,6 +60,7 @@ export default function AddPost() {
           <button className={styles.btn} type="submit">Pulse !</button>
         </form>
       </div>
+    </section>
     </>
   );
 }
