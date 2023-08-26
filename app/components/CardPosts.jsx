@@ -3,6 +3,7 @@ import styles from "./CardPosts.module.css";
 import avatar from "../assets/images/eye.png";
 import { IconEdit, IconTrash } from "@tabler/icons-react";
 import Link from "next/link";
+import RemoveBtn from "./RemoveBtn";
 
 const getPosts = async () => {
     const apiUrl = process.env.API_URL
@@ -47,12 +48,10 @@ const CardPosts = async () => {
               <p>Posté le : {p.createdAt}</p>
             </div>
             <div className={styles.btnAll}>
-              <Link href="/edit-post">
+              <Link href={`/edit-post/${p._id}`}>
                 <IconEdit size={24} color="green" />
               </Link>
-              <Link href="/">
-              <IconTrash size={24} color="red" />                
-              </Link>
+              <RemoveBtn id={p._id}/>
             </div>
           </div>
         ))}

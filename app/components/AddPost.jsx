@@ -7,7 +7,7 @@ import styles from "./AddPost.module.css";
 export default function AddPost() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const router = useRouter()
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,9 +22,9 @@ export default function AddPost() {
       });
       if (res.ok) {
         console.log("ça marche c'est envoyé");
-        setTitle("")
-        setDescription("")
-router.refresh()
+        setTitle("");
+        setDescription("");
+        router.refresh();
       } else {
         throw new Error("failed to fetch");
       }

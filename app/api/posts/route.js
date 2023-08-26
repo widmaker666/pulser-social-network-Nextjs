@@ -21,11 +21,12 @@ export async function GET() {
 }
 
 // !Methode DELETE
-export async function DEELETE(request) {
-  const id = request.nextURL.searchParams.get("id");
+export async function DELETE(request) {
+
+  const id = request.nextUrl.searchParams.get("id");  
   await connectToMongoDB();
   await Posts.findByIdAndDelete(id);
-  return NextResponse.json({ message: "Deleted" });
+  return NextResponse.json({ message: "Deleted" }, { status: 200});
 }
 
 
