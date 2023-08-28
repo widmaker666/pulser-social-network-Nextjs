@@ -19,11 +19,10 @@ const getPostById = async (id) => {
 };
 
 export default async function EditPage({ params }) {
-  const { id } = params;
-  console.log(id);
+  const { id } = params; 
   const { posts } = await getPostById(id);
   const { title, description } = posts;
-  console.log(posts);
+  ;
 
   return (
     <>

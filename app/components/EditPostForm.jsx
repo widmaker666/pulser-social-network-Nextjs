@@ -10,7 +10,6 @@ export default function EditPostForm({ id, title, description }) {
   const router = useRouter();
 
   const handleSubmit = async (e) => {
-    
     const confirmed = confirm("Tu veux modifier ton post ?");
     e.preventDefault();
 
@@ -38,38 +37,48 @@ export default function EditPostForm({ id, title, description }) {
 
   return (
     <>
-      <h1
-        style={{
-          textAlign: "center",
-          textTransform: "capitalize",
-          letterSpacing: "5px",
-        }}
-      >
-        Modifie ton poste
-      </h1>
-      <div className={styles["add-post"]}>
-        <form onSubmit={handleSubmit} className={styles["form-container"]}>
-          <label htmlFor="title">Title</label>
-          <input
-            value={newTitle}
-            onChange={(e) => setNewTitle(e.target.value)}
-            required
-            type="text"
-            id="title"
-            placeholder="You wanna talk to ?"
-          />
-          <label htmlFor="description">Description</label>
-          <textarea
-            value={newDescription}
-            onChange={(e) => setNewDescription(e.target.value)}
-            name="description"
-            id="description"
-            required
-            placeholder="Tell us about your story"
-          ></textarea>
-          <button className={styles.btn} type="submit">Pulse !</button>
-        </form>
-      </div>
+      <section className={styles.backgroundFixed} style={{height: "100vh"}}>
+        <h1
+          style={{
+            margin: 0,
+            paddingTop: "30px",
+            paddingBottom: "10px",
+            textAlign: "center",
+            textTransform: "capitalize",
+            color: "whitesmoke",
+            letterSpacing: "2px",
+            fontSize: "2rem",
+            
+          }}
+        >
+          Modifie ton poste
+        </h1>
+        <div className={styles["add-post"]} >
+          <form onSubmit={handleSubmit} className={styles["form-container"]}>
+            <label htmlFor="title">Title</label>
+            <input
+              value={newTitle}
+              onChange={(e) => setNewTitle(e.target.value)}
+              required
+              type="text"
+              id="title"
+              placeholder="You wanna talk to ?"
+            />
+            <label htmlFor="description">Description</label>
+            <textarea
+              value={newDescription}
+              onChange={(e) => setNewDescription(e.target.value)}
+              name="description"
+              id="description"
+              required
+              placeholder="Tell us about your story"
+            ></textarea>
+            <button className={styles.btn} type="submit">
+              Pulse !
+            </button>
+          </form>
+        </div>
+      </section>
     </>
   );
 }

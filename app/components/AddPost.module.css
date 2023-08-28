@@ -22,7 +22,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: auto;   
+  height: 50vh; 
+  padding-top: 30px;  
 }
 
 .form-container label {

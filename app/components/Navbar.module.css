@@ -1,5 +1,5 @@
 .navbar {
-  height: 90px;
+  height: 110px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,15 +7,31 @@
 }
 
 .logoDiv {
-  padding-left: 30px; 
- 
+  padding-left: 10px;
+}
+
+.logoDiv:hover{
+  animation: logoAnim 1s ease 0s infinite normal forwards;
+}
+@keyframes logoAnim {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
 
 .connectionLinks {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 50px;
+  padding-right: 10px;
 }
 .register {
   text-transform: uppercase;
@@ -30,8 +46,8 @@
 }
 
 .connectionLinks h3 {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .imgLogo {  
