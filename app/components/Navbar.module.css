@@ -1,37 +1,38 @@
 .navbar {
-  height: 110px;
+  height: auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
+  background-image: linear-gradient(
+    -225deg,
+    #dfffcd 0%,
+    #90f9c4 48%,
+    #39f3bb 100%
+  );
 }
 
-.logoDiv {
-  padding-left: 10px;
-}
-
-.logoDiv:hover{
+.logoDiv:hover {
   animation: logoAnim 1s ease 0s infinite normal forwards;
 }
 @keyframes logoAnim {
-	0% {
-		transform: scale(1);
-	}
+  0% {
+    transform: scale(1);
+  }
 
-	50% {
-		transform: scale(1.1);
-	}
+  50% {
+    transform: scale(1.1);
+  }
 
-	100% {
-		transform: scale(1);
-	}
+  100% {
+    transform: scale(1);
+  }
 }
 
 .connectionLinks {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 10px;
 }
 .register {
   text-transform: uppercase;
@@ -42,16 +43,73 @@
 .login {
   text-transform: uppercase;
   text-decoration: none;
-  color:black;
+  color: black;
+}
+.logOut {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;    
 }
 
-.connectionLinks h3 {
-  margin-right: 5px;
-  margin-left: 5px;
+.connectionLinks p {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.imgLogo {  
+.imgLogo {
   border: 2px solid lightgrey;
   border-radius: 50px;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #ffffff;
+  width: 250px;
+  height: 42px;
+  border-radius: 5px;  
+}
+
+.logo-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnGoogle {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.btn-googleOut {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #ffffff;
+  width: 200px;
+  height: 42px;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+.btnGoogleOut {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+.infos-google {
+  display: flex;
+  flex-direction: column;
   
+  align-items: center;
+}
+
+.imgAvatar {
+  border-radius: 50px;
 }

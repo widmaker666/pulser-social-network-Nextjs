@@ -1,6 +1,6 @@
 "use client";
 
-import { AuthContextProvider } from "@/context/AuthContext";
+import { AuthContextProvider } from "@/app/context/AuthContext";
 import Navbar from "./components/Navbar";
 import "./globals.css";
 import { Karla } from "next/font/google";
