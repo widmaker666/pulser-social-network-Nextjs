@@ -2,14 +2,14 @@ import { AuthContextProvider } from "@/app/context/AuthContext";
 import Navbar from "./components/Navbar";
 import "./globals.css";
 import { Karla } from "next/font/google";
-//redeploy
+
 const karla = Karla({
   weight: "400",
   subsets: ["latin"],
 });
 
 export const metadata = {
-  title: "PulseR - Le Réseau Social Intellectuel",
+  title: "PulseR - Le Réseau Social Intellectuel !",
   description:
     "PulseR est une plateforme sociale innovante pour se connecter, partager et interagir.",
   keywords:
