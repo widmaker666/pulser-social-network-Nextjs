@@ -1,5 +1,3 @@
-"use client";
-
 import { AuthContextProvider } from "@/app/context/AuthContext";
 import Navbar from "./components/Navbar";
 import "./globals.css";

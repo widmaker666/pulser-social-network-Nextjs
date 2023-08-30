@@ -1,5 +1,3 @@
-"use client"
-
 import React, {useEffect, useState} from 'react';
 import styles from "./Navbar.module.css";
 import Image from "next/image";
