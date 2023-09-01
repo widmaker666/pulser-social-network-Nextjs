@@ -2,6 +2,7 @@ import { AuthContextProvider } from "@/app/context/AuthContext";
 import Navbar from "./components/Navbar";
 import "./globals.css";
 import { Karla } from "next/font/google";
+import Head from "next/head";
 
 const karla = Karla({
   weight: "400",
@@ -29,6 +30,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta property="og:title" content={metadata.ogTitle} />
+        <meta property="og:description" content={metadata.ogDescription} />
+        <meta property="og:image" content={metadata.ogImage} />
+        <meta property="og:url" content={metadata.ogURL} />
+        <meta name="twitter:title" content={metadata.twitterTitle} />
+        <meta
+          name="twitter:description"
+          content={metadata.twitterDescription}
+        />
+        <meta name="twitter:image" content={metadata.twitterImage} />
+        <link rel="icon" href={metadata.favicon} />
+      </Head>
       <body className={karla.className}>
         <AuthContextProvider>
           <Navbar />
