@@ -59,6 +59,7 @@
 .imgLogo {
   border: 2px solid lightgrey;
   border-radius: 50px;
+  margin-top: 8px;
 }
 
 .btn-google {

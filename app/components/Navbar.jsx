@@ -3,6 +3,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from "./Navbar.module.css";
 import Image from "next/image";
+import avatar from "../assets/images/logo.png";
 import logoNav from "../assets/images/logoNavbar.png";
 import GoogleLogo from "@/public/logogoogle.png";
 import Link from "next/link";
@@ -11,6 +12,7 @@ import Spinner from "./LoadingSpinner"
 
 const Navbar = () => {
   const { user, googleSignIn, logOut } = UserAuth();
+  console.log(user)
  const [loader, setLoader] = useState(true)
 
   const handleSignIn = async () => {
@@ -102,8 +104,8 @@ const Navbar = () => {
               </Link>
             </div>
             <div className={styles["infos-google"]}>
-              <img src={user.photoURL} className={styles.imgAvatar} width={50} height={50} alt="avatar" /> 
-              <p>Bonjour, {user.displayName}</p>
+              <img src={user.photoURL ? (user.photoURL) : ("https://www.gala.fr/imgre/fit/~1~gal~2022~11~03~3a8f53dd-e7b8-4033-9096-5b6e465cd886.jpeg/3578x3226/quality/80/georges-brassens.jpeg") } className={styles.imgAvatar} width={50} height={50} alt="avatar" /> 
+              <p>Bonjour, {user.displayName ? user.displayName : user.email}</p>
             </div>
           </>
         )}
