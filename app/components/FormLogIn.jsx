@@ -11,22 +11,21 @@ const FormLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const router = useRouter()
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setError('')    
+    e.preventDefault();
+    setError("");
 
     try {
-      await signIn(email, password)
-      alert("Content de vous revoir !")
-      router.push('/')
-      
+      await signIn(email, password);
+      alert("Content de vous revoir !");
+      router.push("/");
     } catch (e) {
-      setError(e.message)
+      setError(e.message);
       console.log(e.message);
     }
-  }
+  };
 
   return (
     <>
@@ -34,8 +33,7 @@ const FormLogin = () => {
         <div className={styles["title-container"]}>
           <h1>Page de Connexion</h1>
           <p>
-            {" "}
-            Tu n'as pas de compte ? Inscris toi maintenant{" "}
+            Tu n'as pas de compte ? Inscris toi maintenant
             <Link href="/signin">ICI</Link>
           </p>
         </div>
@@ -44,7 +42,7 @@ const FormLogin = () => {
             <div>
               <label htmlFor="email">Email</label>
               <input
-              onChange={(e)=> setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 name="email"
                 id="email"
@@ -54,7 +52,7 @@ const FormLogin = () => {
             <div>
               <label htmlFor="password">Mot de Passe</label>
               <input
-              onChange={(e)=> setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 name="password"
                 id="password"
@@ -62,8 +60,8 @@ const FormLogin = () => {
               />
             </div>
             <div className={styles["btn-signin"]}>
-            <button type="submit">Valider</button>
-          </div>
+              <button type="submit">Valider</button>
+            </div>
           </div>
         </form>
       </section>

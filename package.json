@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^2.32.0",
+    "encoding": "^0.1.13",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.16",
     "firebase": "^10.3.0",

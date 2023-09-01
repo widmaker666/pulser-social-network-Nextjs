@@ -1,23 +1,22 @@
-"use client"
+"use client";
 
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import Image from "next/image";
-import avatar from "../assets/images/logo.png";
 import logoNav from "../assets/images/logoNavbar.png";
 import GoogleLogo from "@/public/logogoogle.png";
 import Link from "next/link";
 import { UserAuth } from "../context/AuthContext";
-import Spinner from "./LoadingSpinner"
+import Spinner from "./LoadingSpinner";
 
 const Navbar = () => {
   const { user, googleSignIn, logOut } = UserAuth();
-  console.log(user)
- const [loader, setLoader] = useState(true)
+
+  const [loader, setLoader] = useState(true);
 
   const handleSignIn = async () => {
     try {
-      await googleSignIn();     
+      await googleSignIn();
     } catch (error) {
       console.log(error);
     }
@@ -34,14 +33,14 @@ const Navbar = () => {
 
   useEffect(() => {
     const checkAuthentification = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 60))
-  setLoader(false)
- }
- checkAuthentification()
- }, [user])
+      await new Promise((resolve) => setTimeout(resolve, 60));
+      setLoader(false);
+    };
+    checkAuthentification();
+  }, [user]);
 
   return (
-    <>    
+    <>
       <nav className={styles.navbar}>
         <Link href="/">
           <div className={styles.logoDiv}>
@@ -54,8 +53,8 @@ const Navbar = () => {
             />
           </div>
         </Link>
-    
-        { !user ? (
+
+        {!user ? (
           <div className={styles.connectionLinks}>
             <Link className={styles.register} href="/signin">
               Inscription
@@ -71,8 +70,8 @@ const Navbar = () => {
           </Link>
         )}
 
-        { loader ? (
-          <Spinner/>
+        {loader ? (
+          <Spinner />
         ) : !user ? (
           <>
             <div className={styles["btn-google"]}>
@@ -104,7 +103,17 @@ const Navbar = () => {
               </Link>
             </div>
             <div className={styles["infos-google"]}>
-              <img src={user.photoURL ? (user.photoURL) : ("https://www.gala.fr/imgre/fit/~1~gal~2022~11~03~3a8f53dd-e7b8-4033-9096-5b6e465cd886.jpeg/3578x3226/quality/80/georges-brassens.jpeg") } className={styles.imgAvatar} width={50} height={50} alt="avatar" /> 
+              <img
+                src={
+                  user.photoURL
+                    ? user.photoURL
+                    : "https://www.gala.fr/imgre/fit/~1~gal~2022~11~03~3a8f53dd-e7b8-4033-9096-5b6e465cd886.jpeg/3578x3226/quality/80/georges-brassens.jpeg"
+                }
+                className={styles.imgAvatar}
+                width={50}
+                height={50}
+                alt="avatar"
+              />
               <p>Bonjour, {user.displayName ? user.displayName : user.email}</p>
             </div>
           </>

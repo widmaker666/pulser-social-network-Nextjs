@@ -1,38 +1,36 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import { UserAuth } from "../context/AuthContext";
 import styles from "./FormSignUp.module.css";
 import Link from "next/link";
-import {useRouter} from 'next/navigation'
+import { useRouter } from "next/navigation";
 
 const FormSignUp = () => {
-  const [displayName, setDisplayName] = useState("");  
+  const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [checkbox, setCheckbox] = useState(false);
   const [error, setError] = useState("");
 
-  const {createUser} = UserAuth()
-  const router = useRouter()
+  const { createUser } = UserAuth();
+  const router = useRouter();
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('')
+    setError("");
 
-try {
-  await createUser(email, password) 
-  alert("Vous êtes connecté")
-  setEmail('')
-  setPassword('')
-  router.push('/')
-
-} catch (e) {
-  setError(e.message)
-  console.log(e.message);
-}
-
+    try {
+      await createUser(email, password);
+      alert("Vous êtes connecté");
+      setEmail("");
+      setPassword("");
+      router.push("/");
+    } catch (e) {
+      setError(e.message);
+      console.log(e.message);
+    }
   };
 
   return (
@@ -41,8 +39,7 @@ try {
         <div className={styles["title-container"]}>
           <h1>Page d'inscription</h1>
           <p>
-            {" "}
-            Tu as déjà un compte ? Connecte toi maintenant{" "}
+            Tu as déjà un compte ? Connecte toi maintenant
             <Link href="/login">ICI</Link>
           </p>
         </div>
@@ -57,7 +54,7 @@ try {
                 id="name"
                 placeholder="DOE"
               />
-            </div>           
+            </div>
             <div>
               <label htmlFor="email">Email</label>
               <input
