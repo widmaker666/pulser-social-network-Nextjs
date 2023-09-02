@@ -5,13 +5,16 @@ import { UserAuth } from "../context/AuthContext";
 import styles from "./FormSignUp.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { IconEye, IconEyeOff } from "@tabler/icons-react";
 
 const FormSignUp = () => {
-  const [displayName, setDisplayName] = useState("");
+  const [photoURL, setPhotoURL] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isPasswordFocused, setIsPasswordFocused] = useState(false);
+  const [showPassword, setShowPassword] = useState(true);
   const [checkbox, setCheckbox] = useState(false);
   const [error, setError] = useState("");
 
@@ -24,6 +27,7 @@ const FormSignUp = () => {
 
   //!Fonctions
   const handleChange = () => setCheckbox(!checkbox);
+  const handleShow = () => setShowPassword(!showPassword);
 
   const handlePasswordFocus = () => {
     setIsPasswordFocused(true);
@@ -80,9 +84,20 @@ const FormSignUp = () => {
           <form onSubmit={handleSubmit} className={styles["form"]}>
             <div className={styles["form-container"]}>
               <div>
+                <label htmlFor="avatar">Photo Profil</label>
+                <input
+                  onChange={(e) => setPhotoURL(e.target.value)}
+                  type="text"
+                  name="photo"
+                  id="avatar"
+                  placeholder="Lien https de l'image"
+                  required
+                />
+              </div>
+              <div>
                 <label htmlFor="name">Nom</label>
                 <input
-                  onChange={(e) => setDisplayName(e.target.value)}
+                  onChange={(e) => setName(e.target.value)}
                   type="text"
                   name="name"
                   id="name"
@@ -103,16 +118,25 @@ const FormSignUp = () => {
               </div>
               <div>
                 <label htmlFor="password">Mot de Passe</label>
-                <input
-                  required
-                  type="password"
-                  name="password"
-                  id="password"
-                  onFocus={handlePasswordFocus}
-                  onBlur={handlePasswordBlur}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="8 caractères min [A-Z;a-z] 0-9 !:;,?./§"
-                />
+                
+                  <input
+                    required
+                    type={showPassword ? "password" : "text"}
+                    name="password"
+                    id="password"
+                    onFocus={handlePasswordFocus}
+                    onBlur={handlePasswordBlur}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="8 caractères min [A-Z;a-z] 0-9 !:;,?./§"
+                  />
+                  <button style={{background: "transparent", color: "yellow", border: "none"}} type="button" onClick={handleShow}>
+                    {showPassword ? (
+                      <IconEyeOff size={18} />
+                    ) : (
+                      <IconEye size={18} />
+                    )}
+                  </button>               
+
                 {isPasswordFocused && (
                   <div className="valid">
                     <ul>
@@ -166,7 +190,12 @@ const FormSignUp = () => {
                 />
               </div>
               <div className={styles["checkbox-container"]}>
-                <input onChange={handleChange} type="checkbox" name="RGPD" id="rgpd" />
+                <input
+                  onChange={handleChange}
+                  type="checkbox"
+                  name="RGPD"
+                  id="rgpd"
+                />
                 <label htmlFor="rgpd">
                   Accepter les <Link href="/rgpd">RGPD</Link>, la politique de
                   protection des données

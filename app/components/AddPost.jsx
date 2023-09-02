@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import styles from "./AddPost.module.css";
-import { UserAuth } from "../context/AuthContext";
+import { UserAuth, UserContext } from "../context/AuthContext";
 
 
 
@@ -12,7 +12,10 @@ export default function AddPost() {
   const [description, setDescription] = useState("");  
   const router = useRouter();
     
-  const {user} = UserAuth()   
+  const {user} = UserAuth()
+     
+
+  console.log(user)
 
   const author = user && user.displayName
   const pictureUrl = user && user.photoURL

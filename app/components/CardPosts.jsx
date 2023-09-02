@@ -40,7 +40,7 @@ const CardPosts = async () => {
                 height={50}
                 alt="avatar"
               />
-              <h4>{p.author ? p.author : "Georgio"}</h4>
+              <h4>{p.author ? p.author : 'Georgio'}</h4>
               <h4>Brasseur</h4>
             </div>
             <div className={styles["infos-card"]}>

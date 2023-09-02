@@ -17,6 +17,7 @@ import {
 } from "firebase/auth";
 
 import { auth } from "../firebase";
+
 //-google auth//
 const AuthContext = createContext();
 
@@ -38,10 +39,13 @@ export const AuthContextProvider = ({ children }) => {
     signOut(auth);
   };
 
-  //!---------------------------------------//
+  //! --------------------------------------- //
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password)
-  }
+   
+  }  
+
+
   const signIn = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password)
   }
