@@ -8,8 +8,8 @@ import { useRouter } from "next/navigation";
 import { IconEye, IconEyeOff } from "@tabler/icons-react";
 
 const FormSignUp = () => {
-  const [photoURL, setPhotoURL] = useState("");
-  const [name, setName] = useState("");
+  const [photoUrl, setPhotoUrl] = useState("");
+  const [author, setAuthor] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -83,21 +83,21 @@ const FormSignUp = () => {
           </div>
           <form onSubmit={handleSubmit} className={styles["form"]}>
             <div className={styles["form-container"]}>
-              <div>
+             {/*  <div>
                 <label htmlFor="avatar">Photo Profil</label>
                 <input
-                  onChange={(e) => setPhotoURL(e.target.value)}
+                  onChange={(e) => setPhotoUrl(e.target.value)}
                   type="text"
                   name="photo"
                   id="avatar"
                   placeholder="Lien https de l'image"
                   required
                 />
-              </div>
+              </div> */}
               <div>
                 <label htmlFor="name">Nom</label>
                 <input
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => setAuthor(e.target.value)}
                   type="text"
                   name="name"
                   id="name"
