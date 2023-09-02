@@ -23,6 +23,7 @@ const FormLogin = () => {
       router.push("/");
     } catch (e) {
       setError(e.message);
+      alert("Erreur dans le mot de passe ou le mail !");
       console.log(e.message);
     }
   };

@@ -1,127 +1,141 @@
-.signup {    
-        height:auto;
+.valid {
+  padding-top: 10px;
+  background-color: rgb(255, 255, 255);
+  width: 220px;
+  border-radius: 25px;
+  position: absolute;
+  top: 60%;
+  right: 95%;
+  border: solid #000000 1px;
+}
+
+.signup {
+  height: auto;
 }
 .signup-background {
-    background: url("/back1.jpg");
-    height: 100%;
-    width: 100%;
-    color: white;
+  background: url("/back1.jpg");
+  height: 100%;
+  width: 100%;
+  color: white;
 }
 
 .title-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
 }
 
 .title-container a {
-    text-decoration: none;
-    color: yellow;
+  text-decoration: none;
+  color: yellow;
 }
 .title-container a:hover {
-cursor: pointer;
-    text-decoration: none;
-    color: yellow;    
+  cursor: pointer;
+  text-decoration: none;
+  color: yellow;
 }
 
-
 .title-container h1 {
-    text-transform: uppercase;
-    letter-spacing: 3.5px;
-    font-size: 2rem; 
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  font-size: 2rem;
 }
 
 .form {
-    display: flex;    
-    flex-direction: column;    
-    align-items: center;
-    width: 100%;
-    height: auto;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
-.form-container {      
-    padding-top:10px;
-    margin-bottom: 5px;
+.form-container {
+  padding-top: 10px;
+  margin-bottom: 5px;
 }
 
 .form-container div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    text-align:center;   
-    margin-bottom: 30px;       
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .form-container label {
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
 }
 
 .form-container input {
-    outline: none;
-    width: 80%;
-    height: 35px;
-    padding-left: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
+  outline: none;
+  width: 80%;
+  height: 35px;
+  padding-left: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .btn-signin {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .btn-signin button {
-    width: 110px;
-    height: 35px;
-    background: black;
-    border: 1px solid lightgrey;
-    border-radius: 10px;
-    font-family: "Karla", sans-serif;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    color: whitesmoke;
-    font-weight: 200;
-    transition: 1s;
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.24);    
+  width: 110px;
+  height: 35px;
+  background: black;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  font-family: "Karla", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: whitesmoke;
+  font-weight: 200;
+  transition: 1s;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.24);
 }
 
 .btn-signin button:hover {
-    cursor: pointer;
-    background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
-    transition: 1s;  
-    transform: scale(1.2);
-    color: black;
-  }
+  cursor: pointer;
+  background-image: linear-gradient(
+    -225deg,
+    #dfffcd 0%,
+    #90f9c4 48%,
+    #39f3bb 100%
+  );
+  transition: 1s;
+  transform: scale(1.2);
+  color: black;
+}
 
 .checkbox-container {
-    display: block !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;  
-    margin: 10px !important; 
-
+  display: block !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px !important;
 }
 .checkbox-container a {
-    text-decoration: none;
-    color: yellow;
+  text-decoration: none;
+  color: yellow;
 }
 
 .checkbox-container input {
-    width: 20px;
-    height: auto;
-    border: 1px solid black;
-    margin: 0;
+  width: 20px;
+  height: auto;
+  border: 1px solid black;
+  margin: 0;
 }
 
 .checkbox-container label {
-   font-size: 0.8rem;
-   text-transform: none;
-   letter-spacing: 1px;  
+  font-size: 0.8rem;
+  text-transform: none;
+  letter-spacing: 1px;
 }
