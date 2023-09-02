@@ -36,11 +36,12 @@ const FormSignUp = () => {
   return (
     <>
       <section className={styles.signup}>
+        <div className={styles['signup-background']}>
         <div className={styles["title-container"]}>
           <h1>Page d'inscription</h1>
           <p>
             Tu as déjà un compte ? Connecte toi maintenant
-            <Link href="/login">ICI</Link>
+            <Link href="/login"> ICI</Link>
           </p>
         </div>
         <form onSubmit={handleSubmit} className={styles["form"]}>
@@ -99,6 +100,7 @@ const FormSignUp = () => {
             <button type="submit">Valider</button>
           </div>
         </form>
+        </div>
       </section>
     </>
   );

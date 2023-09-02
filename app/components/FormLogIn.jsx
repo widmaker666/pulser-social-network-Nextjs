@@ -30,11 +30,12 @@ const FormLogin = () => {
   return (
     <>
       <section className={styles.signup}>
+        <div className={styles['signup-background']}>
         <div className={styles["title-container"]}>
           <h1>Page de Connexion</h1>
           <p>
             Tu n'as pas de compte ? Inscris toi maintenant
-            <Link href="/signin">ICI</Link>
+            <Link href="/signin"> ICI</Link>
           </p>
         </div>
         <form onSubmit={handleSubmit} className={styles["form"]}>
@@ -64,6 +65,7 @@ const FormLogin = () => {
             </div>
           </div>
         </form>
+        </div>
       </section>
     </>
   );
