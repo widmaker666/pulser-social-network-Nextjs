@@ -1,12 +1,12 @@
 import Image from "next/image";
 import styles from "./CardPosts.module.css";
-import avatar from "../assets/images/eye.png";
-import { IconEdit, IconTrash } from "@tabler/icons-react";
+import { IconEdit } from "@tabler/icons-react";
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
 
+
 const getPosts = async () => {
-    const apiUrl = process.env.API_URL
+  const apiUrl = process.env.API_URL;
   try {
     const res = await fetch(`${apiUrl}/api/posts`, {
       cache: "no-store",
@@ -21,7 +21,8 @@ const getPosts = async () => {
   }
 };
 
-const CardPosts = async () => {
+const CardPosts = async () => { 
+
   const { posts } = await getPosts();
 
   return (
@@ -32,14 +33,14 @@ const CardPosts = async () => {
         {posts.map((p) => (
           <div className={styles.cardPosts} key={p._id}>
             <div className={styles["infos-user"]}>
-              <Image
-                src={avatar}
+              <img
+                src={p.pictureUrl ? p.pictureUrl : "https://www.gala.fr/imgre/fit/~1~gal~2022~11~03~3a8f53dd-e7b8-4033-9096-5b6e465cd886.jpeg/3578x3226/quality/80/georges-brassens.jpeg" } 
                 className={styles.imgCard}
                 width={50}
                 height={50}
                 alt="avatar"
               />
-              <h4>Claudius</h4>
+              <h4>{p.author ? p.author : "Georgio"}</h4>
               <h4>Brasseur</h4>
             </div>
             <div className={styles["infos-card"]}>
@@ -51,7 +52,7 @@ const CardPosts = async () => {
               <Link href={`/edit-post/${p._id}`}>
                 <IconEdit size={24} color="green" />
               </Link>
-              <RemoveBtn id={p._id}/>
+              <RemoveBtn id={p._id} />
             </div>
           </div>
         ))}

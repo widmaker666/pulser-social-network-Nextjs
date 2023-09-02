@@ -4,6 +4,8 @@ const postsSchema = new Schema(
   {
     title: String,    
     description: String,
+    author: String,
+    pictureUrl: String,
   },
   { timestamps: true }
 );

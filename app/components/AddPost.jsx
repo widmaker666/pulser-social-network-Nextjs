@@ -3,11 +3,19 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import styles from "./AddPost.module.css";
+import { UserAuth } from "../context/AuthContext";
+
+
 
 export default function AddPost() {
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState("");  
   const router = useRouter();
+    
+  const {user} = UserAuth()   
+
+  const author = user && user.displayName
+  const pictureUrl = user && user.photoURL
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,13 +26,15 @@ export default function AddPost() {
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify({ title, description }),
+        body: JSON.stringify({ title, description, author, pictureUrl }),
       });
-      if (res.ok) {
+      
+      if (res.ok) {        
         alert("Ton post est créé");
         setTitle("");
         setDescription("");
         router.refresh();
+        
       } else {
         throw new Error("failed to fetch");
       }
