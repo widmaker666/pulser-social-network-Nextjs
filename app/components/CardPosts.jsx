@@ -31,7 +31,8 @@ const getComments = async () => {
     if (!res.ok) {
       throw new Error("Couldn't get comments");
     }
-    return res.json();
+    const commentsData = await res.json()
+    return commentsData;
   } catch (error) {
     console.log("Error loading comments", error);
   }
