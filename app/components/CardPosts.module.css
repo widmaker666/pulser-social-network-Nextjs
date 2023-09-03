@@ -58,5 +58,19 @@
     gap: 10px;
 }
 
+.add-comment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comments-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;    
+    gap:15px;
+}
 
 

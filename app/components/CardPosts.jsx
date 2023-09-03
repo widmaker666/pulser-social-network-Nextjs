@@ -3,6 +3,7 @@ import styles from "./CardPosts.module.css";
 import { IconEdit } from "@tabler/icons-react";
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
+import AddComments from "./AddComments";
 
 
 const getPosts = async () => {
@@ -54,6 +55,27 @@ const CardPosts = async () => {
               </Link>
               <RemoveBtn id={p._id} />
             </div>
+            <div className={styles['add-comment']}>
+            <img
+                src={p.pictureCommentUrl ? p.CommentpictureUrl : "https://www.gala.fr/imgre/fit/~1~gal~2022~11~03~3a8f53dd-e7b8-4033-9096-5b6e465cd886.jpeg/3578x3226/quality/80/georges-brassens.jpeg" } 
+                className={styles.imgCard}
+                width={29}
+                height={29}
+                alt="avatar"
+            /> 
+            <AddComments/>
+            </div> 
+            <button type="button" className='btn-show-comments'>Plus de commentaires</button>
+            <div className={styles['comments-container']}>
+            <img
+                src={p.pictureUrl ? p.pictureUrl : "https://www.gala.fr/imgre/fit/~1~gal~2022~11~03~3a8f53dd-e7b8-4033-9096-5b6e465cd886.jpeg/3578x3226/quality/80/georges-brassens.jpeg" } 
+                className={styles.imgCard}
+                width={29}
+                height={29}
+                alt="avatar"
+              />
+            <p id='show-comments'>ICI LES COMMENTAIRES EN BASES DE DONNEE</p>  
+            </div>           
           </div>
         ))}
       </section>

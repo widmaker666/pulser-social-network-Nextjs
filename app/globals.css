@@ -8,5 +8,25 @@ body {
   cursor: pointer;
 }
 
+.comment-input {
+  width: 80%;  
+}
 
+#comment {
+  width: 100%;
+  height: 32px;
+  border: none;
+  border-radius: 60px;
+  background: #ededed;
+  outline: none;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+#show-comments{  
+  border-radius: 20px;
+  background: #ededed;
+  height: auto;
+  padding: 10px;
+}
 
