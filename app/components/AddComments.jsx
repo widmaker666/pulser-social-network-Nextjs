@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { UserAuth } from "../context/AuthContext";
 import { useRouter } from "next/navigation";
-import styles from './CardPosts.module.css'
+import styles from "./CardPosts.module.css";
 
 export default function AddComments({ idComment }) {
   const [comment, setComment] = useState("");
@@ -42,8 +42,8 @@ export default function AddComments({ idComment }) {
       <div className={styles["add-comment"]}>
         <img
           src={
-            pictureCommentUrl 
-              ? pictureCommentUrl 
+            pictureCommentUrl
+              ? pictureCommentUrl
               : "https://www.gala.fr/imgre/fit/~1~gal~2022~11~03~3a8f53dd-e7b8-4033-9096-5b6e465cd886.jpeg/3578x3226/quality/80/georges-brassens.jpeg"
           }
           className={styles.imgCard}
@@ -51,8 +51,7 @@ export default function AddComments({ idComment }) {
           height={29}
           alt="avatar"
         />
-      
-          
+
         <form onSubmit={handleComment}>
           <input
             value={comment}
@@ -61,12 +60,9 @@ export default function AddComments({ idComment }) {
             name="comment"
             id="comment"
             placeholder="Donne ton opinion..."
-          />                    
-          <button type="submit">pulse</button>          
-
-        </form>        
-         
-      
+          />
+          <button type="submit">pulse</button>
+        </form>
       </div>
     </>
   );

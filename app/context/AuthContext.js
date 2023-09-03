@@ -15,8 +15,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
-import { auth} from "../firebase";
-
+import { auth } from "../firebase";
 
 //-google auth//
 const AuthContext = createContext();
@@ -40,8 +39,7 @@ export const AuthContextProvider = ({ children }) => {
 
   //! --------------------------------------- //
   const createUser = (email, password) => {
-     return createUserWithEmailAndPassword(auth, email, password)
-   
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const signIn = (email, password) => {

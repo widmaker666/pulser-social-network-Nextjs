@@ -83,7 +83,7 @@ const FormSignUp = () => {
           </div>
           <form onSubmit={handleSubmit} className={styles["form"]}>
             <div className={styles["form-container"]}>
-             {/*  <div>
+              {/*  <div>
                 <label htmlFor="avatar">Photo Profil</label>
                 <input
                   onChange={(e) => setPhotoUrl(e.target.value)}
@@ -118,24 +118,32 @@ const FormSignUp = () => {
               </div>
               <div>
                 <label htmlFor="password">Mot de Passe</label>
-                
-                  <input
-                    required
-                    type={showPassword ? "password" : "text"}
-                    name="password"
-                    id="password"
-                    onFocus={handlePasswordFocus}
-                    onBlur={handlePasswordBlur}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="8 caractères min [A-Z;a-z] 0-9 !:;,?./§"
-                  />
-                  <button style={{background: "transparent", color: "yellow", border: "none"}} type="button" onClick={handleShow}>
-                    {showPassword ? (
-                      <IconEyeOff size={18} />
-                    ) : (
-                      <IconEye size={18} />
-                    )}
-                  </button>               
+
+                <input
+                  required
+                  type={showPassword ? "password" : "text"}
+                  name="password"
+                  id="password"
+                  onFocus={handlePasswordFocus}
+                  onBlur={handlePasswordBlur}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="8 caractères min [A-Z;a-z] 0-9 !:;,?./§"
+                />
+                <button
+                  style={{
+                    background: "transparent",
+                    color: "yellow",
+                    border: "none",
+                  }}
+                  type="button"
+                  onClick={handleShow}
+                >
+                  {showPassword ? (
+                    <IconEyeOff size={18} />
+                  ) : (
+                    <IconEye size={18} />
+                  )}
+                </button>
 
                 {isPasswordFocused && (
                   <div className="valid">

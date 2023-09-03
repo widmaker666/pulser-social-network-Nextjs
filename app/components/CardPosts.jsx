@@ -30,8 +30,7 @@ const getComments = async () => {
 
     if (!res.ok) {
       console.log("impossible de fetch", res.status);
-      return { comments: [] }
-      
+      return { comments: [] };
     }
     return res.json();
   } catch (error) {
@@ -79,22 +78,27 @@ const CardPosts = async () => {
                 <RemoveBtn id={p._id} />
               </div>
               <AddComments idComment={p._id} />
-
               {comments &&
                 comments.map((c) => (
                   <div key={c._id} className={styles["comments-container"]}>
-                    <img
-                      src={
-                        c.pictureCommentUrl
-                          ? c.pictureCommentUrl
-                          : "https://www.gala.fr/imgre/fit/~1~gal~2022~11~03~3a8f53dd-e7b8-4033-9096-5b6e465cd886.jpeg/3578x3226/quality/80/georges-brassens.jpeg"
-                      }
-                      className={styles.imgCard}
-                      width={29}
-                      height={29}
-                      alt="avatar"
-                    />
-                    <p id="show-comments">{c.comment}</p>
+                    {p._id === c.idComment ? (
+                      <>
+                        <img
+                          src={
+                            c.pictureCommentUrl
+                              ? c.pictureCommentUrl
+                              : "https://www.gala.fr/imgre/fit/~1~gal~2022~11~03~3a8f53dd-e7b8-4033-9096-5b6e465cd886.jpeg/3578x3226/quality/80/georges-brassens.jpeg"
+                          }
+                          className={styles.imgCard}
+                          width={29}
+                          height={29}
+                          alt="avatar"
+                        />
+                        <p id="show-comments">{c.comment}</p>
+                      </>
+                    ) : (
+                      <></>
+                    )}
                   </div>
                 ))}
             </div>
