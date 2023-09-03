@@ -51,8 +51,8 @@ export default function AddComments({ idComment }) {
           height={29}
           alt="avatar"
         />
-      </div>
-      <div className="comment-input">
+      
+          
         <form onSubmit={handleComment}>
           <input
             value={comment}
@@ -61,9 +61,12 @@ export default function AddComments({ idComment }) {
             name="comment"
             id="comment"
             placeholder="Donne ton opinion..."
-          />
-          <button type="submit">pulse</button>
-        </form>
+          />                    
+          <button type="submit">pulse</button>          
+
+        </form>        
+         
+      
       </div>
     </>
   );

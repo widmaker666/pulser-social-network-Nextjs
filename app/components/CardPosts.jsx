@@ -39,14 +39,14 @@ const getComments = async () => {
 
 const CardPosts = async () => {
   const { posts } = await getPosts();
-  const { comments } = await getComments();
+  const { comments } = await getComments();  
 
   return (
     <>
       <section className={styles["card-container"]}>
         <h1 id="h1">Le mur des idées</h1>
         {/* Création d'un composant posts */}
-        {posts.map((p) => (
+        {posts && posts.map((p) => (
             <div className={styles.cardPosts} key={p._id}>
               <div className={styles["infos-user"]}>
                 <img
@@ -73,11 +73,10 @@ const CardPosts = async () => {
                   <IconEdit size={24} color="green" />
                 </Link>
                 <RemoveBtn id={p._id} />
-              </div>
-              <div>
+              </div>             
                 <AddComments idComment={p._id} />
-              </div>
-              {comments.map((c) => (
+                              
+              {comments && comments.map((c) => (
                   <div key={c._id} className={styles["comments-container"]}>
                     <img
                       src={

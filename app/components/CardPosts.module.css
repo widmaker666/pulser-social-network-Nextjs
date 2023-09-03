@@ -61,17 +61,18 @@
 .add-comment {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 20px;
 }
 
+
 .comments-container {
     height: auto;
-    display: flex;
+    display: flex;    
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;    
-    gap:15px;
+    margin-bottom: 5px;    
+    gap:5px;
 }
 
 

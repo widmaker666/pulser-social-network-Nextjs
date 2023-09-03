@@ -8,12 +8,13 @@ body {
   cursor: pointer;
 }
 
-.comment-input {
-  width: 80%;  
-}
+
+ form {
+  display:flex;
+ }
 
 #comment {
-  width: 100%;
+  width: 45vh;
   height: 32px;
   border: none;
   border-radius: 60px;
@@ -21,6 +22,7 @@ body {
   outline: none;
   padding-left: 10px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 #show-comments{  
