@@ -66,8 +66,9 @@
 }
 
 .comments-container {
+    height: auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;    
     gap:15px;
