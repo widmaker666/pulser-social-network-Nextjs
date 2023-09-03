@@ -79,7 +79,7 @@ const CardPosts = async () => {
                 <AddComments idComment={p._id} />
               </div>
               {comments && comments.map((c) => (
-                  <div className={styles["comments-container"]}>
+                  <div key={c._id} className={styles["comments-container"]}>
                     <img
                       src={
                         c.pictureCommentUrl
