@@ -29,11 +29,11 @@ const getComments = async () => {
     });
 
     if (!res.ok) {
-      throw new Error("Couldn't get posts");
+      throw new Error("Couldn't get comments");
     }
     return res.json();
   } catch (error) {
-    console.log("Error loading posts", error);
+    console.log("Error loading comments", error);
   }
 };
 
@@ -46,8 +46,7 @@ const CardPosts = async () => {
       <section className={styles["card-container"]}>
         <h1 id="h1">Le mur des idées</h1>
         {/* Création d'un composant posts */}
-        {posts &&
-          posts.map((p) => (
+        {posts.map((p) => (
             <div className={styles.cardPosts} key={p._id}>
               <div className={styles["infos-user"]}>
                 <img
@@ -78,7 +77,7 @@ const CardPosts = async () => {
               <div>
                 <AddComments idComment={p._id} />
               </div>
-              {comments && comments.map((c) => (
+              {comments.map((c) => (
                   <div key={c._id} className={styles["comments-container"]}>
                     <img
                       src={
