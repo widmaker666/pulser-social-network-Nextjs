@@ -16,7 +16,7 @@ export default function AddComments({ idComment }) {
     e.preventDefault();
 
     try {
-      const res = await fetch(`http://localhost:3000/api/comments/`, {
+      const res = await fetch("/api/comments", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -27,7 +27,7 @@ export default function AddComments({ idComment }) {
       if (res.ok) {
         alert("comment created");
         setComment("");
-        router.push("/");
+        router.refresh();
       } else {
         throw new Error("failed to fetch comment");
       }
