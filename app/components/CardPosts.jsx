@@ -5,22 +5,6 @@ import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
 import AddComments from "./AddComments";
 
-const getComments = async () => {
-  const apiUrlComment = process.env.API_URL;
-  try {
-    const res = await fetch(`${apiUrlComment}/api/comments`, {
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      throw new Error("Couldn't get comments");
-    }
-    return res.json()    
-  } catch (error) {
-    console.log("Error loading comments", error);
-  }
-};
-
 const getPosts = async () => {
   const apiUrl = process.env.API_URL;
   try {
@@ -37,18 +21,36 @@ const getPosts = async () => {
   }
 };
 
+const getComments = async () => {
+  const apiUrlComment = process.env.API_URL;
+  try {
+    const res = await fetch(`${apiUrlComment}/api/comments`, {
+      cache: "no-store",
+    });
+
+    if (!res.ok) {
+      console.log("impossible de fetch", res.status);
+      return { comments: [] }
+      
+    }
+    return res.json();
+  } catch (error) {
+    console.log("Error loading comments", error);
+  }
+};
 
 const CardPosts = async () => {
-  const { comments } = await getComments();  
   const { posts } = await getPosts();
+  const { comments } = await getComments();
 
   return (
     <>
       <section className={styles["card-container"]}>
         <h1 id="h1">Le mur des idées</h1>
-        
+
         {/* Création d'un composant posts */}
-        {posts && posts.map((p) => (
+        {posts &&
+          posts.map((p) => (
             <div className={styles.cardPosts} key={p._id}>
               <div className={styles["infos-user"]}>
                 <img
@@ -75,10 +77,11 @@ const CardPosts = async () => {
                   <IconEdit size={24} color="green" />
                 </Link>
                 <RemoveBtn id={p._id} />
-              </div>             
-                <AddComments idComment={p._id} />
-                              
-              {comments && comments.map((c) => (
+              </div>
+              <AddComments idComment={p._id} />
+
+              {comments &&
+                comments.map((c) => (
                   <div key={c._id} className={styles["comments-container"]}>
                     <img
                       src={
@@ -91,9 +94,7 @@ const CardPosts = async () => {
                       height={29}
                       alt="avatar"
                     />
-                    <p id="show-comments">
-                      {c.comment}
-                    </p>
+                    <p id="show-comments">{c.comment}</p>
                   </div>
                 ))}
             </div>
