@@ -22,9 +22,9 @@ const getPosts = async () => {
 };
 
 const getComments = async () => {
-  const apiUrl = process.env.API_URL;
+  const apiUrlComment = process.env.API_URL;
   try {
-    const res = await fetch(`${apiUrl}/api/comments`, {
+    const res = await fetch(`${apiUrlComment}/api/comments`, {
       cache: "no-store",
     });
 
