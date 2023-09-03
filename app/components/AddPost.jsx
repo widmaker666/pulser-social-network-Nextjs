@@ -60,6 +60,7 @@ export default function AddPost() {
               value={description}
               name="description"
               id="description"
+              max='500'
               required
               placeholder="La première phrase est souvent la plus dure à dire...."
               onChange={(e) => setDescription(e.target.value)}

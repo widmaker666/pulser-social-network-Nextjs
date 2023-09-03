@@ -56,12 +56,13 @@ export default function AddComments({ idComment }) {
           <input
             value={comment}
             onChange={(e) => setComment(e.target.value)}
+            max="300"
             type="text"
             name="comment"
             id="comment"
             placeholder="Donne ton opinion..."
           />
-          <button type="submit">pulse</button>
+          <button className="btnComments" type="submit">pulse</button>
         </form>
       </div>
     </>
