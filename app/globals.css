@@ -1,17 +1,16 @@
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 #delete:hover {
   cursor: pointer;
 }
 
-
- form {
-  display:flex;
- }
+form {
+  display: flex;
+}
 
 #comment {
   width: 100%;
@@ -25,7 +24,7 @@ body {
   margin-right: 10px;
 }
 
-#show-comments{  
+#show-comments {
   border-radius: 20px;
   background: #ededed;
   height: auto;
@@ -35,7 +34,12 @@ body {
 
 .btnComments {
   border: none;
-  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  background-image: linear-gradient(
+    to top,
+    #ff9a9e 0%,
+    #fecfef 99%,
+    #fecfef 100%
+  );
   border-radius: 100px;
   padding: 5px;
   text-transform: uppercase;
@@ -47,29 +51,28 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
-
+  padding: 20px 40px;
 }
 
-.h1 {
-text-align: center;
-color: white;
-text-transform: uppercase;
-letter-spacing: 2px;
+.text h1 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
 }
 
 .text a {
   text-align: center;
-  color:white;
+  color: white;
 }
 
 .text p {
   text-align: center;
-  color:white;  
-  font-size: 1.05rem;  
-letter-spacing: 2px;
-text-shadow: 4px 4px 2px rgba(0,0,0,1);
-
+  color: white;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 1);
 }
 
 footer {
@@ -87,7 +90,7 @@ footer {
   background: #ffedd6;
 }
 
-.social-network{
+.social-network {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,4 +108,3 @@ footer p {
 p a {
   margin-left: 5px;
 }
-
