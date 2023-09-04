@@ -20,10 +20,10 @@ export default function RemoveBtn({ id, userUid }) {
       if (res.ok) { 
         alert("Le post vient d'être supprimé...")       
         router.refresh();
-      }else{
-        alert("Ce n'est pas ton post")
-        router.push('/login')
       }
+    }else{
+      alert("Ce n'est pas ton post")
+      router.push('/login')
     }
   };
   return (
