@@ -3,18 +3,22 @@
 import { useState } from "react";
 import styles from "./AddPost.module.css";
 import { useRouter } from "next/navigation";
+import { UserAuth } from "../context/AuthContext";
 
-export default function EditPostForm({ id, title, description }) {
+export default function EditPostForm({ id, title, description, userUid }) {
   const [newTitle, setNewTitle] = useState(title);
   const [newDescription, setNewDescription] = useState(description);
   const router = useRouter();
+
+  const {user} = UserAuth()
+  const editUserId = user && user.uid
 
   const handleSubmit = async (e) => {
     const confirmed = confirm("Tu veux modifier ton post ?");
     e.preventDefault();
 
     try {
-      if (confirmed) {
+      if (confirmed && editUserId === userUid) {
         const res = await fetch(`/api/posts/${id}`, {
           method: "PUT",
           headers: {
@@ -27,8 +31,11 @@ export default function EditPostForm({ id, title, description }) {
           throw new Error("failed to fetch post");
         }
         alert("Tu viens de modifier ton post !");
-        router.refresh();
+       
         router.push("/");
+      } else {
+        alert("Ce n'est pas ton post ou tu n'es pas connecté")        
+        router.push("/login");
       }
     } catch (error) {
       console.log("doesn't work", error);
