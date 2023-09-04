@@ -42,10 +42,22 @@ body {
   font-size: 0.6rem;
 }
 
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .h1 {
 text-align: center;
 color: white;
 text-transform: uppercase;
 letter-spacing: 2px;
-
 }
+
+.text a {
+  text-align: center;
+  color:white;
+}
+
+
