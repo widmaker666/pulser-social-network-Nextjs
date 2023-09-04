@@ -62,4 +62,37 @@ letter-spacing: 2px;
   color:white;
 }
 
+footer {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  text-align: center;
+  background: #ffedd6;
+}
+
+.social-network{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer a {
+  color: black;
+}
+
+footer p {
+  margin: 8px auto;
+  font-size: 0.8rem;
+}
+
+p a {
+  margin-left: 5px;
+}
 

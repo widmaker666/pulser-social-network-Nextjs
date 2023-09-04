@@ -1,11 +1,13 @@
 import AddPost from "./components/AddPost";
 import CardPosts from "./components/CardPosts";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <>
       <AddPost />
       <CardPosts />
+      <Footer/>
     </>
   );
 }
