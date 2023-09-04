@@ -45,5 +45,7 @@ body {
 .h1 {
 text-align: center;
 color: white;
-text-transform: uppercase; 
+text-transform: uppercase;
+letter-spacing: 2px;
+
 }

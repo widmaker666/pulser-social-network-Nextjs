@@ -89,7 +89,7 @@ export default function AddPost() {
             <h1 className="h1" >
               Inscris toi pour ton premier post !
             </h1>
-            <Link href='/login'>Connecte toi pour participer</Link>
+            <Link style={{textAlign: "center", color:'white'}} href='/login'>Connecte toi pour participer</Link>
           </>
         )}
       </section>
