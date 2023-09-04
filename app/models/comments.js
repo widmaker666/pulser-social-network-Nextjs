@@ -5,6 +5,7 @@ const commentsSchema = new Schema(
     pictureCommentUrl: String,
     comment: String,
     idComment: String,
+    userId: String,
   },
   { timestamps: true }
 );

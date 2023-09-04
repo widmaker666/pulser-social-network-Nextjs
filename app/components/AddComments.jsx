@@ -10,32 +10,34 @@ export default function AddComments({ idComment }) {
   const router = useRouter();
 
   const { user } = UserAuth();
-  const pictureCommentUrl = user && user.photoURL;
+  const userId = user && user.uid;
+  const pictureCommentUrl = user && user.photoURL; 
+  
 
   const handleComment = async (e) => {
     e.preventDefault();
-
-    try {
-      const res = await fetch("/api/comments", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({ pictureCommentUrl, comment, idComment }),
-      });
-
-      if (res.ok) {
-        alert("comment created");
-        setComment("");
-        router.refresh();
-      } else {
-        throw new Error("failed to fetch comment");
+    
+      try {
+        const res = await fetch("/api/comments", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ pictureCommentUrl, comment, idComment, userId }),
+        });
+  
+        if (res.ok) {
+          alert("comment created");
+          setComment("");
+          router.refresh();
+        } else {
+          throw new Error("failed to fetch comment");
+        }
+      } catch (error) {
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
-    }
-    return;
-  };
+      return;
+    }; 
 
   return (
     <>

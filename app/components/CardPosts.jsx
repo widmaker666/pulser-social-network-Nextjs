@@ -3,6 +3,7 @@ import styles from "./CardPosts.module.css";
 import { IconEdit } from "@tabler/icons-react";
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
+import RemoveComment from "./RemoveComment";
 import AddComments from "./AddComments";
 
 const getPosts = async () => {
@@ -94,7 +95,8 @@ const CardPosts = async () => {
                           height={29}
                           alt="avatar"
                         />
-                        <p id="show-comments">{c.comment}</p>
+                        <p id="show-comments">{c.comment}</p>                        
+                        <RemoveComment id={c._id} userId={c.userId}/>               
                       </>
                     ) : (
                       <></>
