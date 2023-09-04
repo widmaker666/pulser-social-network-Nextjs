@@ -4,6 +4,7 @@ import { useState } from "react";
 import { UserAuth } from "../context/AuthContext";
 import { useRouter } from "next/navigation";
 import styles from "./CardPosts.module.css";
+import Link from "next/link";
 
 export default function AddComments({ idComment }) {
   const [comment, setComment] = useState("");
