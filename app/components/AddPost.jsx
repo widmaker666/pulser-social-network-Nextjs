@@ -14,6 +14,7 @@ export default function AddPost() {
 
   const author = user && user.displayName;
   const pictureUrl = user && user.photoURL;
+  const userUid = user && user.uid;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +25,13 @@ export default function AddPost() {
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify({ title, description, author, pictureUrl }),
+        body: JSON.stringify({
+          title,
+          description,
+          author,
+          pictureUrl,
+          userUid,
+        }),
       });
 
       if (res.ok) {
@@ -44,32 +51,45 @@ export default function AddPost() {
   return (
     <>
       <section className={styles.backgroundFixed}>
-        <div className={styles["add-post"]}>
-          <form onSubmit={handleSubmit} className={styles["form-container"]}>
-            <label htmlFor="title">Titre</label>
-            <input
-              value={title}
-              required
-              type="text"
-              id="title"
-              placeholder="Un titre ...."
-              onChange={(e) => setTitle(e.target.value)}
-            />
-            <label htmlFor="description">Description</label>
-            <textarea
-              value={description}
-              name="description"
-              id="description"
-              max='500'
-              required
-              placeholder="La première phrase est souvent la plus dure à dire...."
-              onChange={(e) => setDescription(e.target.value)}
-            ></textarea>
-            <button className={styles.btn} type="submit">
-              Pulse !
-            </button>
-          </form>
-        </div>
+        {user ? (
+          <>
+            <div className={styles["add-post"]}>
+              <form
+                onSubmit={handleSubmit}
+                className={styles["form-container"]}
+              >
+                <label htmlFor="title">Titre</label>
+                <input
+                  value={title}
+                  required
+                  type="text"
+                  id="title"
+                  placeholder="Un titre ...."
+                  onChange={(e) => setTitle(e.target.value)}
+                />
+                <label htmlFor="description">Description</label>
+                <textarea
+                  value={description}
+                  name="description"
+                  id="description"
+                  max="500"
+                  required
+                  placeholder="La première phrase est souvent la plus dure à dire...."
+                  onChange={(e) => setDescription(e.target.value)}
+                ></textarea>
+                <button className={styles.btn} type="submit">
+                  Pulse !
+                </button>
+              </form>
+            </div>
+          </>
+        ) : (
+          <>
+            <h1 className="h1" >
+              Inscris toi pour ton premier post !
+            </h1>
+          </>
+        )}
       </section>
     </>
   );

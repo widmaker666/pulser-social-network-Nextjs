@@ -76,7 +76,7 @@ const CardPosts = async () => {
                 <Link href={`/edit-post/${p._id}`}>
                   <IconEdit size={24} color="green" />
                 </Link>
-                <RemoveBtn id={p._id} />
+                <RemoveBtn id={p._id} userUid={p.userUid} />
               </div>
               <AddComments idComment={p._id} />
               {comments &&
