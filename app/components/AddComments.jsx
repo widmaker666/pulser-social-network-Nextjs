@@ -72,7 +72,8 @@ export default function AddComments({ idComment }) {
           </>
         ) : (
           <>
-            <h1>Connecte toi pour participer</h1>
+          <Link href='/login'>Connecte toi pour participer</Link>
+            
           </>
         )}
       </div>
