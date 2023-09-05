@@ -98,6 +98,8 @@ const FormSignUp = () => {
                 <label htmlFor="name">Nom</label>
                 <input
                   onChange={(e) => setAuthor(e.target.value)}
+                  maxLength="200"
+                  minLength="2"
                   type="text"
                   name="name"
                   id="name"
@@ -109,6 +111,8 @@ const FormSignUp = () => {
                 <label htmlFor="email">Email</label>
                 <input
                   required
+                  maxLength="200"
+                  minLength="2"
                   type="email"
                   name="email"
                   id="email"
@@ -122,6 +126,8 @@ const FormSignUp = () => {
                 <input
                   required
                   type={showPassword ? "password" : "text"}
+                  maxLength="30"
+                  minLength="8"
                   name="password"
                   id="password"
                   onFocus={handlePasswordFocus}
@@ -190,6 +196,9 @@ const FormSignUp = () => {
                   Confirmation du Mot de Passe
                 </label>
                 <input
+                  required
+                  maxLength="30"
+                  minLength="8"
                   type="password"
                   name="confirmPassword"
                   id="confirmPassword"

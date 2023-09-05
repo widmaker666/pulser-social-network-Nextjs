@@ -60,10 +60,12 @@ export default function AddComments({ idComment }) {
               <input
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
-                max="300"
+                maxLength="3000"
+                minLength="2"
                 type="text"
                 name="comment"
                 id="comment"
+                required
                 placeholder="Donne ton opinion..."
               />
               <button className="btnComments" type="submit">
@@ -73,8 +75,7 @@ export default function AddComments({ idComment }) {
           </>
         ) : (
           <>
-          <Link href='/login'>Connecte toi pour commenter</Link>
-            
+            <Link href="/login">Connecte toi pour commenter</Link>
           </>
         )}
       </div>

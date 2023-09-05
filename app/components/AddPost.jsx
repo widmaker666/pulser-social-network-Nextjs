@@ -63,6 +63,8 @@ export default function AddPost() {
                 <input
                   value={title}
                   required
+                  maxLength="30"
+                  minLength="2"
                   type="text"
                   id="title"
                   placeholder="Un titre ...."
@@ -73,7 +75,8 @@ export default function AddPost() {
                   value={description}
                   name="description"
                   id="description"
-                  max="500"
+                  maxLength="3000"
+                  minLength="2"
                   required
                   placeholder="La première phrase est souvent la plus dure à dire...."
                   onChange={(e) => setDescription(e.target.value)}
@@ -92,24 +95,32 @@ export default function AddPost() {
                 PulseR : Votre Espace Social, Votre Communauté PulseR est bien
                 plus qu'une simple application, c'est un espace social conçu
                 pour vous permettre de créer, de connecter et d'interagir comme
-                jamais auparavant.</p>               
-                <p>Créez et Partagez : PulseR vous donne le
-                pouvoir de partager vos idées, vos expériences, et vos passions
-                avec une communauté qui partage vos intérêts.</p>               
-                <p>Interagissez et
-                Échangez : Discutez, échangez des idées, et établissez des
-                connexions significatives avec des esprits créatifs du monde
-                entier.</p>               
-                <p>Sécurité et Personnalisation : Votre vie privée est
-                notre priorité. PulseR offre un contrôle total sur votre profil
-                et vos informations.</p>                
-                <p>Innovation Continue : Nous évoluons
-                constamment pour vous offrir de nouvelles fonctionnalités
-                passionnantes. La seule limite est votre imagination.</p>                
-                <p>Rejoignez
-                PulseR aujourd'hui et découvrez un espace où vos idées prennent
-                vie, où la créativité s'épanouit, et où les connexions se
-                forgent. Votre communauté PulseR vous attend.
+                jamais auparavant.
+              </p>
+              <p>
+                Créez et Partagez : PulseR vous donne le pouvoir de partager vos
+                idées, vos expériences, et vos passions avec une communauté qui
+                partage vos intérêts.
+              </p>
+              <p>
+                Interagissez et Échangez : Discutez, échangez des idées, et
+                établissez des connexions significatives avec des esprits
+                créatifs du monde entier.
+              </p>
+              <p>
+                Sécurité et Personnalisation : Votre vie privée est notre
+                priorité. PulseR offre un contrôle total sur votre profil et vos
+                informations.
+              </p>
+              <p>
+                Innovation Continue : Nous évoluons constamment pour vous offrir
+                de nouvelles fonctionnalités passionnantes. La seule limite est
+                votre imagination.
+              </p>
+              <p>
+                Rejoignez PulseR aujourd'hui et découvrez un espace où vos idées
+                prennent vie, où la créativité s'épanouit, et où les connexions
+                se forgent. Votre communauté PulseR vous attend.
               </p>
             </div>
           </>

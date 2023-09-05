@@ -31,41 +31,46 @@ const FormLogin = () => {
   return (
     <>
       <section className={styles.signup}>
-        <div className={styles['signup-background']}>
-        <div className={styles["title-container"]}>
-          <h1>Page de Connexion</h1>
-          <p>
-            Tu n'as pas de compte ? Inscris toi maintenant
-            <Link href="/signin"> ICI</Link>
-          </p>
-        </div>
-        <form onSubmit={handleSubmit} className={styles["form"]}>
-          <div className={styles["form-container"]}>
-            <div>
-              <label htmlFor="email">Email</label>
-              <input
-                onChange={(e) => setEmail(e.target.value)}
-                type="email"
-                name="email"
-                id="email"
-                placeholder="bonjour.hello@gmail.com"
-              />
-            </div>
-            <div>
-              <label htmlFor="password">Mot de Passe</label>
-              <input
-                onChange={(e) => setPassword(e.target.value)}
-                type="password"
-                name="password"
-                id="password"
-                placeholder="6 caractères min [A-Z;a-z] 0-9 !:;,?./§"
-              />
-            </div>
-            <div className={styles["btn-signin"]}>
-              <button type="submit">Valider</button>
-            </div>
+        <div className={styles["signup-background"]}>
+          <div className={styles["title-container"]}>
+            <h1>Page de Connexion</h1>
+            <p>
+              Tu n'as pas de compte ? Inscris toi maintenant
+              <Link href="/signin"> ICI</Link>
+            </p>
           </div>
-        </form>
+          <form onSubmit={handleSubmit} className={styles["form"]}>
+            <div className={styles["form-container"]}>
+              <div>
+                <label htmlFor="email">Email</label>
+                <input
+                  onChange={(e) => setEmail(e.target.value)}
+                  maxLength="100"
+                  required
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="bonjour.hello@gmail.com"
+                />
+              </div>
+              <div>
+                <label htmlFor="password">Mot de Passe</label>
+                <input
+                  onChange={(e) => setPassword(e.target.value)}
+                  maxLength="30"
+                  minLength="8"
+                  required
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="6 caractères min [A-Z;a-z] 0-9 !:;,?./§"
+                />
+              </div>
+              <div className={styles["btn-signin"]}>
+                <button type="submit">Valider</button>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
     </>
