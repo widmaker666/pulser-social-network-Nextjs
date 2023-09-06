@@ -7,6 +7,7 @@ import {
   signOut,
   onAuthStateChanged,
   GoogleAuthProvider,
+  updateProfile,
 } from "firebase/auth";
 
 //- Password email AUTH -//
@@ -21,7 +22,6 @@ import { auth } from "../firebase";
 const AuthContext = createContext();
 
 //-password-email//
-const UserContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -38,8 +38,19 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   //! --------------------------------------- //
-  const createUser = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password);
+  const createUser = (email, password, displayName, photoURL) => {
+    return createUserWithEmailAndPassword(auth, email, password).then(
+      (userCredential) => {
+        const user = userCredential.user;
+
+        return updateProfile(auth.currentUser, {
+          displayName: displayName,
+          photoURL: photoURL,
+        }).then(() => {
+          return user;
+        });
+      }
+    );
   };
 
   const signIn = (email, password) => {
@@ -63,5 +74,5 @@ export const AuthContextProvider = ({ children }) => {
 };
 
 export const UserAuth = () => {
-  return useContext(AuthContext, UserContext);
+  return useContext(AuthContext);
 };

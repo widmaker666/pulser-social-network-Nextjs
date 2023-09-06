@@ -8,8 +8,8 @@ import { useRouter } from "next/navigation";
 import { IconEye, IconEyeOff } from "@tabler/icons-react";
 
 const FormSignUp = () => {
-  const [photoUrl, setPhotoUrl] = useState("");
-  const [author, setAuthor] = useState("");
+  const [photoURL, setPhotoURL] = useState("");
+  const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -17,6 +17,9 @@ const FormSignUp = () => {
   const [showPassword, setShowPassword] = useState(true);
   const [checkbox, setCheckbox] = useState(false);
   const [error, setError] = useState("");
+
+  const { createUser } = UserAuth();
+  const router = useRouter();
 
   //!Const Validations
   const passwordHasLowercaseLetter = /[a-z]/.test(password);
@@ -37,9 +40,6 @@ const FormSignUp = () => {
     setIsPasswordFocused(false);
   };
 
-  const { createUser } = UserAuth();
-  const router = useRouter();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -59,11 +59,15 @@ const FormSignUp = () => {
     }
 
     try {
-      await createUser(email, password);
+      await createUser(email, password, displayName, photoURL);
       alert("Vous êtes connecté");
       setEmail("");
       setPassword("");
+      setDisplayName("")
+      setPhotoURL('')
+      setConfirmPassword('')
       router.push("/");
+      router.refresh()
     } catch (e) {
       setError(e.message);
       console.log(e.message);
@@ -83,22 +87,22 @@ const FormSignUp = () => {
           </div>
           <form onSubmit={handleSubmit} className={styles["form"]}>
             <div className={styles["form-container"]}>
-              {/*  <div>
+              <div>
                 <label htmlFor="avatar">Photo Profil</label>
                 <input
-                  onChange={(e) => setPhotoUrl(e.target.value)}
+                  onChange={(e) => setPhotoURL(e.target.value)}
                   type="text"
                   name="photo"
                   id="avatar"
                   placeholder="Lien https de l'image"
                   required
                 />
-              </div> */}
+              </div>
               <div>
                 <label htmlFor="name">Nom</label>
                 <input
-                  onChange={(e) => setAuthor(e.target.value)}
-                  maxLength="200"
+                  onChange={(e) => setDisplayName(e.target.value)}
+                  maxLength="30"
                   minLength="2"
                   type="text"
                   name="name"

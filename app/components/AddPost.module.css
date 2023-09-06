@@ -12,6 +12,7 @@
   align-items: center;
   width: 100%;
   height: auto;
+  
 }
 
 .form-container {
@@ -19,7 +20,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
   height: 50vh;
   padding-top: 10px;
   margin-bottom: 20px;

@@ -11,9 +11,7 @@ export default function EditCommentForm({ id, comment, userId }) {
   const router = useRouter();
 
   const { user } = UserAuth();
-  const editCommentUserId = user && user.uid;
-
-  console.log(editCommentUserId, userId);
+  const editCommentUserId = user && user.uid;  
 
   const handleSubmitComment = async (e) => {
     const confirmed = confirm("Tu veux modifier ton commentaire ?");

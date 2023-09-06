@@ -7,6 +7,7 @@ const postsSchema = new Schema(
     author: String,
     pictureUrl: String,
     userUid: String,
+    
   },
   { timestamps: true }
 );

@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import styles from "./AddPost.module.css";
 import { UserAuth } from "../context/AuthContext";
-import Link from "next/link";
 
 export default function AddPost() {
   const [title, setTitle] = useState("");
