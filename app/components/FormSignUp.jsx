@@ -63,11 +63,11 @@ const FormSignUp = () => {
       alert("Vous êtes connecté");
       setEmail("");
       setPassword("");
-      setDisplayName("")
-      setPhotoURL('')
-      setConfirmPassword('')
+      setDisplayName("");
+      setPhotoURL("");
+      setConfirmPassword("");
       router.push("/");
-      router.refresh()
+      router.refresh();
     } catch (e) {
       setError(e.message);
       console.log(e.message);

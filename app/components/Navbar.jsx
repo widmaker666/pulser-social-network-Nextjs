@@ -10,7 +10,7 @@ import { UserAuth } from "../context/AuthContext";
 import Spinner from "./LoadingSpinner";
 
 const Navbar = () => {
-  const { user, googleSignIn, logOut } = UserAuth();
+  const { user, googleSignIn, logOut, deleteAccount } = UserAuth();
 
   const [loader, setLoader] = useState(true);
 
@@ -28,6 +28,18 @@ const Navbar = () => {
       alert("Tu es déconnecté");
     } catch (error) {
       console.log(error);
+    }
+  };
+
+  const handleDelete = async () => {
+    const confirmed = confirm("Tu es sur de vouloir supprimer ton compte");
+
+    if (confirmed) {
+      try {
+        await deleteAccount();
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
@@ -115,6 +127,14 @@ const Navbar = () => {
                 alt="avatar"
               />
               <p>Bonjour, {user.displayName ? user.displayName : user.email}</p>
+              <div className="del-update">
+              <button id="btnDeleteUser" type="button" onClick={handleDelete}>
+                Supprime ton compte
+              </button>
+              <Link id="btnUpdateUser" href="/profil">
+                Modifier son profil
+              </Link>
+              </div>
             </div>
           </>
         )}
