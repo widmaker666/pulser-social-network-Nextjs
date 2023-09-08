@@ -6,7 +6,6 @@ import RemoveBtn from "./RemoveBtn";
 import RemoveComment from "./RemoveComment";
 import AddComments from "./AddComments";
 
-
 const getPosts = async () => {
   const apiUrl = process.env.API_URL;
   try {
@@ -39,7 +38,6 @@ const getComments = async () => {
     console.log("Error loading comments", error);
   }
 };
-
 
 const CardPosts = async () => {
   const { posts } = await getPosts();
@@ -97,11 +95,11 @@ const CardPosts = async () => {
                           height={29}
                           alt="avatar"
                         />
-                        <p id="show-comments">{c.comment}</p>                        
-                        <RemoveComment id={c._id} userId={c.userId}/>
+                        <p id="show-comments">{c.comment}</p>
+                        <RemoveComment id={c._id} userId={c.userId} />
                         <Link href={`/edit-comment/${c._id}`}>
-                  <IconEdit size={24} color="green" />
-                </Link>      
+                          <IconEdit size={24} color="green" />
+                        </Link>
                       </>
                     ) : (
                       <></>
