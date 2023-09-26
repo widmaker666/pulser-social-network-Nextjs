@@ -26,8 +26,8 @@ const FormProfileUpdate = () => {
       await updateProfileInfo(displayName, photoURL, email, password);
       alert("Profil update");
       router.push("/");
-      router.refresh();
-      router.refresh();
+      router.refresh();      
+      router.refresh();      
     } catch (e) {
       console.log(e);
     }

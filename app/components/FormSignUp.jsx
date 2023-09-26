@@ -95,7 +95,7 @@ const FormSignUp = () => {
                   name="photo"
                   id="avatar"
                   placeholder="Lien https de l'image"
-                  required
+                  
                 />
               </div>
               <div>

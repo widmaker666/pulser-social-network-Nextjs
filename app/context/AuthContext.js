@@ -9,6 +9,8 @@ import {
   GoogleAuthProvider,
   updateProfile,
   deleteUser,
+  updateEmail,
+  updatePassword,
 } from "firebase/auth";
 
 //- Password email AUTH -//
@@ -83,8 +85,6 @@ export const AuthContextProvider = ({ children }) => {
       updateProfile(user, {
         displayName: displayName,
         photoURL: photoURL,
-        email: email,
-        password: password,
       })
         .then(() => {
           // La mise à jour du profil a réussi
@@ -93,6 +93,22 @@ export const AuthContextProvider = ({ children }) => {
         .catch((error) => {
           // Gérez les erreurs de mise à jour de profil
           console.error("Erreur lors de la mise à jour du profil :", error);
+        });
+      //! Update email //
+      updateEmail(user, email)
+        .then(() => {
+          console.log("valide mail");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      //! Update password //
+      updatePassword(user, password)
+        .then(() => {
+          console.log("valide password");
+        })
+        .catch((error) => {
+          console.log(error);
         });
     }
   };
