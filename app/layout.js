@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import "./globals.css";
 import { Karla } from "next/font/google";
 import Head from "next/head";
+import logo from "./assets/images/logo.png"
+
 
 const karla = Karla({
   weight: "400",
@@ -18,12 +20,12 @@ export const metadata = {
   ogTitle: "PulseR - Le Réseau Social Intellectuel",
   ogDescription:
     "PulseR est une plateforme sociale innovante pour se connecter, partager et interagir.",
-  ogImage: "https://zupimages.net/up/23/34/5uww.png", // Lien vers votre image de préférence (1200x630 pixels pour une bonne qualité)
+  ogImage: "./assets/images/logo.png", // Lien vers votre image de préférence (1200x630 pixels pour une bonne qualité)
   ogURL: "https://pulser-social-network-nextjs.vercel.app", // URL de votre page principale
   twitterTitle: "PulseR - Le Réseau Social Intellectuel",
   twitterDescription:
     "PulseR est une plateforme sociale innovante pour se connecter, partager et interagir.",
-  twitterImage: "https://zupimages.net/up/23/34/5uww.png", // Lien vers votre image de préférence (1200x630 pixels pour une bonne qualité)
+  twitterImage: "./assets/images/logo.png", // Lien vers votre image de préférence (1200x630 pixels pour une bonne qualité)
   favicon: "/favicon.ico",
 };
 
