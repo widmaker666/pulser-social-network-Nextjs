@@ -18,8 +18,8 @@ export const metadata = {
   ogTitle: "PulseR - Le Réseau Social Intellectuel",
   ogDescription:
     "PulseR est une plateforme sociale innovante pour se connecter, partager et interagir.",
-  ogImage: "./assets/images/logo.png", // Lien vers votre image de préférence (1200x630 pixels pour une bonne qualité)
-  ogURL: "/logoSEO.png", // URL de votre page principale
+  ogImage: "/logoSEO.png", // Lien vers votre image de préférence (1200x630 pixels pour une bonne qualité)
+  ogURL: "https://pulser-social-network-nextjs.vercel.app", // URL de votre page principale
   twitterTitle: "PulseR - Le Réseau Social Intellectuel",
   twitterDescription:
     "PulseR est une plateforme sociale innovante pour se connecter, partager et interagir.",
