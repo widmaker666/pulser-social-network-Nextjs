@@ -8,7 +8,7 @@ const Footer = () => {
       <footer>
         <div className="social-network">
           <Link
-            href="https://www.linkedin.com/in/alexandre-hontcharouk-879b71b9/"
+            href="https://www.linkedin.com/in/alexandre-hontcharouk-developpeur-web-frontend-javascript-reactjs/"
             target="_blank"
           >
             <IconBrandLinkedin size={22} color="#0e76a8" />

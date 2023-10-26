@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./CardPosts.module.css";
 import { IconEdit } from "@tabler/icons-react";
 import Link from "next/link";
