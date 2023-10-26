@@ -13,8 +13,8 @@ const Footer = () => {
           >
             <IconBrandLinkedin size={22} color="#0e76a8" />
           </Link>
-          <Link href="https://alexwebdevlyon.netlify.app" target="_blank">
-            Mon CV intéractif
+          <Link href="https://alexandre-hontcharouk-portfolio.vercel.app" target="_blank">
+            Mon Portfolio
           </Link>
         </div>
         <p>
