@@ -1,4 +1,3 @@
-# WORK IN PROGRESS...........
 ![Lien vers l'image](https://zupimages.net/up/23/33/0pnb.png)
 
 # Pulser - Social Network for Existential Ideas
