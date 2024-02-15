@@ -27,9 +27,6 @@ To test Pulser locally, follow these steps:
 3. Configure settings in the configuration file: `config.js`
 4. Launch the application: `npm start`
 
-## Contributions
-
-We welcome contributions from the community! If you'd like to contribute to Pulser, please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for more information on how to submit pull requests and report issues.
 
 ## License
 
@@ -43,7 +40,7 @@ Created by [HONTCHAROUK Alexandre](https://alexwebdevlyon.netlify.app).
 
 
 //----------------------------------------------------------------------------------------------------------------------------//
-# TRAVAIL EN COURS...........
+
 ![Lien vers l'image](https://zupimages.net/up/23/33/0pnb.png)
 
 # Pulser - Réseau Social d'Idées Existentielles
@@ -74,9 +71,7 @@ Pour tester Pulser localement, suivez ces étapes :
 3. Configurez les paramètres dans le fichier de configuration : `config.js`
 4. Lancez l'application : `npm start`
 
-## Contributions
 
-Nous accueillons les contributions de la communauté ! Si vous souhaitez contribuer à Pulser, veuillez consulter [CONTRIBUTING.md](CONTRIBUTING.md) pour plus d'informations sur la manière de soumettre des pull requests et de signaler des problèmes.
 
 ## Licence
 
